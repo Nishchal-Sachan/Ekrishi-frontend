@@ -2,9 +2,10 @@
 
 .profilePage {
   display: flex;
-  height: 100%;
+  height: 100vh;
+  padding-bottom: 100px;
 
-  @include md{
+  @include md {
     flex-direction: column;
     overflow: scroll;
   }
@@ -12,29 +13,29 @@
   .details {
     flex: 3;
     overflow-y: scroll;
-    padding-bottom: 50px;
 
-    @include md{
-      flex:none;
+    @include md {
+      flex: none;
       height: max-content;
+      overflow: hidden;
     }
 
-    .wrapper{
+    .wrapper {
       padding-right: 50px;
       display: flex;
       flex-direction: column;
       gap: 50px;
 
-      .title{
+      .title {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        h1{
+        h1 {
           font-weight: 300;
         }
 
-        button{
+        button {
           padding: 12px 24px;
           background-color: #fece51;
           cursor: pointer;
@@ -42,18 +43,29 @@
         }
       }
 
-      .info{
+      .info {
         display: flex;
         flex-direction: column;
         gap: 20px;
 
-        span{
+        span {
           display: flex;
           align-items: center;
           gap: 20px;
         }
 
-        img{
+        button {
+          width: 100px;
+          border: none;
+          background-color: red;
+          color: white;
+          font-size: 14px;
+          padding: 10px 0px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        img {
           width: 40px;
           height: 40px;
           border-radius: 50%;
@@ -62,19 +74,20 @@
       }
     }
   }
+
   .chatContainer {
     flex: 2;
     background-color: #fcf5f3;
     height: 100%;
 
-    @include md{
-      flex:none;
+    @include md {
+      flex: none;
       height: max-content;
     }
+  }
 
-    .wrapper{
-      padding: 0px 20px;
-      height: 100%;
-    }
+  .wrapper {
+    padding: 0px 20px;
+    height: 100%;
   }
 }
